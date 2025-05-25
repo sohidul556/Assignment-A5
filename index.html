@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painful devboard</title>
+    <!-- DaisyUI + tailwindcss cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body id="page" class="bg-[#F4F7FF]">
+    <!-- Header Section -->
+    <header>
+
+
+        <nav class="bg-[#FFFFFF] max-w-[1536px] h-[100px] mx-36 px-6 my-4 shadow-lg rounded-lg">
+            <div class="flex justify-between items-center py-6 px-6">
+
+                <!-- Logo & Title -->
+                <div>
+                    <ul class="flex items-center gap-2">
+                        <img class="w-6" src="assets/logo.png" alt="Logo">
+                        <li class="text-lg font-semibold"><a href="#">DevBoard</a></li>
+                    </ul>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex items-center gap-4">
+                    <button class="w-[123px] h-[64px] btn rounded-[32px] flex items-center gap-2 p-2">
+                        <img class="w-4 h-4" src="assets/checkbox.png" alt="Checkbox">
+                        <span class="taskCount">23</span>
+                    </button>
+
+</body>
+<div id="themeBox">
+    <button onclick="changeTheme()" class=" w-[64px] h-[64px] btn btn-circle p-2 ">
+        <img class="w-10 h-10" src="assets/theme-btn.png" alt="Theme Button">
+    </button>
+</div>
+</div>
+
+</div>
+</nav>
+
+</header>
+<!-- Main Section -->
+<main class=" max-w-[1536px] mx-36">
+    <!-- Layers -->
+
+    <section>
+        <div class="flex justify-between items-center gap-6">
+
+            <!-- card-Big-1 -->
+            <div class="w-[1146px] h-[918px] bg-[#FFFFFF] p-6 shadow-lg rounded-lg">
+
+
+                <!-- layout-1 -->
+                <div>
+                    <!-- card-1 -->
+                    <div class="flex gap-2">
+                        <div class=" items-center px-14 w-[263px] h-[128px] bg-[#F4F7FF] flex gap-5 rounded-lg">
+                            <div>
+                                <img src="assets/checkbox.png" alt="logo">
+                            </div>
+                            <div>
+                                <h1 class="font-semibold">Task Assigned</h1>
+                                <span class="taskCount" class="font-bold text-3xl">06</span>
+                            </div>
+                        </div>
+
+                        <!-- card-2 -->
+                        <div style="background: linear-gradient(to right, #3752FD, #6C7FFA, #9BA8F8);"
+                            class="w-[524px] h-[128px] px-14 flex items-center gap-6 rounded-lg">
+                            <div>
+                                <img src="assets/board.png" alt="logo">
+                            </div>
+
+                            <div>
+                                <a href="Question.html" target="_blank" class="text-white font-semibold text-3xl">Discover Something New Today</a>
+                    
+                            </div>
+                        </div>
+
+                        <!-- card-3 -->
+                        <div class="items-center px-14 w-[263px] h-[128px] bg-[#F4F7FF] flex gap-5 rounded-lg">
+                            <div>
+                                <img src="assets/calender.png" alt="logo">
+                            </div>
+
+                            <div>
+                                <h1 id="day" class="font-semibold"></h1>
+                                <span id="fullDate" class="font-bold"></span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <!-- Layout-2 -->
+                    <div id="parent" class="grid grid-cols-3 grid-rows-2 gap-4">
+                        <!-- card-1 -->
+
+                        <div class="bg-[#F4F7FF] rounded-lg w-[342px] h-[317px] mt-16 p-4">
+                            <h6
+                                class="w-[114px] h-[40px] font-bold bg-white flex items-center justify-center rounded-md">
+                                ShopEase</h6>
+                            <h1 class="text-center font-bold mt-4">Fix Mobile Button Issue</h1>
+
+                            <div class="w-[294px] h-[92px] bg-white p-3 mt-4 rounded-md shadow">
+                                <p>Debug using Chrome DevTools,check for overlapping </p>
+                            </div>
+
+                            <div class="flex justify-between items-center px-5 mt-5">
+                                <div>
+                                    <h6 class="text-gray-600">Deadline</h6>
+                                    <h2 class="font-semibold">21 March 2025</h2>
+                                </div>
+                                <div>
+                                    <button id="child" onclick="reduceTask(this)"
+                                        class="btn btn-primary w-[135px] h-[44px]">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card-2 -->
+                        <div class="bg-[#F4F7FF] rounded-lg w-[342px] h-[317px] mt-16 p-4">
+                            <h6
+                                class="w-[114px] h-[40px] font-bold bg-white flex items-center justify-center rounded-md">
+                                CloudSync</h6>
+                            <h1 class="text-center font-bold mt-4">Add Dark Mode</h1>
+
+                            <div class="w-[294px] h-[92px] bg-white p-3 mt-4 rounded-md shadow">
+                                <p>Debug using Chrome DevTools,check for overlapping </p>
+                            </div>
+
+                            <div class="flex justify-between items-center px-5 mt-5">
+                                <div>
+                                    <h6 class="text-gray-600">Deadline</h6>
+                                    <h2 class="font-semibold">21 March 2025</h2>
+                                </div>
+                                <div>
+                                    <button id="child" onclick="reduceTask(this)"
+                                        class="btn btn-primary w-[135px] h-[44px]">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card-3 -->
+                        <div class="bg-[#F4F7FF] rounded-lg w-[342px] h-[317px] mt-16 p-4">
+                            <h6
+                                class="w-[114px] h-[40px] font-bold bg-white flex items-center justify-center rounded-md">
+                                SwiftPay</h6>
+                            <h1 class="text-center font-bold mt-4">Optimize Home page</h1>
+
+                            <div class="w-[294px] h-[92px] bg-white p-3 mt-4 rounded-md shadow">
+                                <p>Debug using Chrome DevTools,check for overlapping </p>
+                            </div>
+
+                            <div class="flex justify-between items-center px-5 mt-5">
+                                <div>
+                                    <h6 class="text-gray-600">Deadline</h6>
+                                    <h2 class="font-semibold">21 March 2025</h2>
+                                </div>
+                                <div>
+                                    <button id="child" onclick="reduceTask(this)"
+                                        class="btn btn-primary w-[135px] h-[44px]">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card-4 -->
+                        <div class="bg-[#F4F7FF] rounded-lg w-[342px] h-[317px] mt-8 p-4">
+                            <h6
+                                class="w-[114px] h-[40px] font-bold bg-white flex items-center justify-center rounded-md">
+                                Meta</h6>
+                            <h1 class="text-center font-bold mt-4">Add new emoji 🤲</h1>
+                            <div class="w-[294px] h-[92px] bg-white p-3 mt-4 rounded-md shadow">
+                                <p>Debug using Chrome DevTools,check for overlapping </p>
+                            </div>
+
+                            <div class="flex justify-between items-center px-5 mt-5">
+                                <div>
+                                    <h6 class="text-gray-600">Deadline</h6>
+                                    <h2 class="font-semibold">21 March 2025</h2>
+                                </div>
+                                <div>
+                                    <button  id="child" onclick="reduceTask(this)"
+                                        class="btn btn-primary w-[135px] h-[44px]">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card-5 -->
+                        <div class="bg-[#F4F7FF] rounded-lg w-[342px] h-[317px] mt-8 p-4">
+                            <h6
+                                class="w-[114px] h-[40px] font-bold bg-white flex items-center justify-center rounded-md">
+                                Google LLC</h6>
+                            <h1 class="text-center font-bold mt-4">Integrate OpenAI API </h1>
+
+                            <div class="w-[294px] h-[92px] bg-white p-3 mt-4 rounded-md shadow">
+                                <p>Debug using Chrome DevTools,check for overlapping </p>
+
+                            </div>
+
+                            <div class="flex justify-between items-center px-5 mt-5">
+                                <div>
+                                    <h6 class="text-gray-600">Deadline</h6>
+                                    <h2 class="font-semibold">21 March 2025</h2>
+                                </div>
+                                <div>
+                                    <button  id="child" onclick="reduceTask(this)"
+                                        class="btn btn-primary w-[135px] h-[44px]">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card-6 -->
+                        <div class="bg-[#F4F7FF] rounded-lg w-[342px] h-[317px] mt-8 p-4">
+                            <h6
+                                class="w-[114px] h-[40px] font-bold bg-white flex items-center justify-center rounded-md">
+                                Glassdoar</h6>
+                            <h1 class="text-center font-bold mt-4">Improve Job searching</h1>
+
+                            <div class="w-[294px] h-[92px] bg-white p-3 mt-4 rounded-md shadow">
+                                <p>Debug using Chrome DevTools,check for overlapping </p>
+                            </div>
+
+                            <div class="flex justify-between items-center px-5 mt-5">
+                                <div>
+                                    <h6 class="text-gray-600">Deadline</h6>
+                                    <h2 class="font-semibold">21 March 2025</h2>
+                                </div>
+                                <div>
+                                    <button id="child" onclick="reduceTask(this)"
+                                        class="btn btn-primary w-[135px] h-[44px]">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- card-big-2 -->
+            <div class="w-[366px] h-[918px] bg-[#FFFFFF] p-6 shadow-lg rounded-lg">
+
+                <div>
+                    <ul class="flex justify-center items-center my-5 gap-2">
+                        <img class="w-6" src="assets/activity.png" alt="Logo">
+                        <li class="text-lg font-semibold"><a href="#">Activity Logo</a></li>
+                    </ul>
+                </div>
+                <button onclick="clearHistory(this)"
+                    class="btn btn-primary rounded-lg block mx-auto w-36 h-10 font-semibold ">Clear History</button>
+
+                <div id="activityLog">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+<!-- Footer Section -->
+<footer></footer>
+
+
+<script>
+
+    // Get today's date-----------------
+
+    const today = new Date();
+
+    // Extract day name
+    const dayName = today.toLocaleDateString('en-US', { weekday: 'short' });
+
+    // Format full date (e.g., "Jul 28 2025")
+    const formattedDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+    // Insert data into the div
+    document.getElementById('day').textContent = dayName + ",";
+    document.getElementById('fullDate').textContent = formattedDate;
+
+
+    //  theame change --------------------
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function changeTheme() {
+        const newThemeColor = getRandomColor();
+        const textColor = getRandomColor();
+
+        // Change the background of the entire page
+        document.body.style.backgroundColor = newThemeColor;
+
+        // Update the theme box color
+        document.getElementById('themeBox').style.backgroundColor = newThemeColor;
+        document.getElementById('themeBox').style.color = textColor;
+
+    }
+
+    // বাটন এর কাজ 
+
+    function reduceTask(button) {
+        let taskCountElems = document.querySelectorAll(".taskCount");
+        taskCountElems.forEach(elem => {
+            let taskCount = parseInt(elem.innerText);
+            if (taskCount > 0) {
+                elem.innerText = taskCount - 1;
+            }
+        });
+
+        //  ইতিহাস করে ফেলাম
+
+        let activityLog = document.getElementById("activityLog");
+        let currentTime = new Date().toLocaleString(); // Task Completion সময় সংগ্রহ
+                activityLog.innerHTML += `<p> You have Completed a task at ${currentTime}.</p>`;
+
+        // বাটন ডিজেবল 
+
+        button.disabled = true;
+
+
+
+    }
+
+    function clearHistory(button) {
+        document.getElementById("activityLog").innerHTML = "<p> History cleared.</p>";
+
+       
+    }
+
+    //alert--- 
+
+        document.getElementById("child").addEventListener("click", function() {
+        alert("Devboard update succesfully");
+
+        });
+
+
+        document.getElementById("parent").addEventListener("click", function() {
+        alert("Congrates!!!  you have complete task");
+        });
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

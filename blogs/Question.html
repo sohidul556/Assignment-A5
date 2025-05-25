@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painful devboard</title>
+    <!-- DaisyUI + tailwindcss cdn -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class=" bg-[#F4F7FF] w-screen h-screen overflow-hidden">
+    <!-- Header Section -->
+    <header>
+
+
+        <nav class="bg-[#FFFFFF] max-w-[1536px] h-[100px] mx-36 px-6 my-4 shadow-lg rounded-lg">
+            <div class="flex justify-between items-center py-6 px-6">
+
+                <!-- Logo & Title -->
+                <div>
+                    <ul class="flex items-center gap-2">
+                        <img class="w-6" src="/assets/logo.png" alt="Logo">
+                        <li class="text-lg font-semibold"><a href="#">DevBoard</a></li>
+                    </ul>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex items-center gap-4">
+                    <a href="index.html"> <button class="btn btn-primary w-[135px] h-[44px]">Back to desk</button></a>
+    </header>
+
+
+
+    <div>
+        <h2 class="text-center font-bold text-5xl">Blogs</h2>
+
+
+    </div>
+
+    <section">
+
+        <div class="bg-[#FFFFFF] max-w-[1536px] h-[150px] mx-36 px-6 my-4 shadow-lg rounded-lg">
+            <h2 class="font-bold text-justify text-2xl py-5">Question:-1 what are the different way to select on element
+                in DOM ?</h2>
+            <hr>
+            <p>Great Question in the threr are serveral ways to selet an element uising Javascript <br>
+                Commonly used By-ID,by Class,by tag name,QuerySeletor ,querySelectorAll etc. <br>
+            </p>
+
+        </div>
+        <div class="bg-[#FFFFFF] max-w-[1536px] h-[150px] mx-36 px-6 my-4 shadow-lg rounded-lg">
+            <h2 class="font-bold text-justify text-2xl py-5">Question:-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+            <hr>
+            <p>innerHTML Used to get or set HTML content inside an element.innerText Used to get or set only the visible text inside an element.Ignores hidden elements and does not parse HTML tags.3. textContent
+        Returns the text content, including hidden elements, but without parsing HTML.
+
+
+</p>
+
+        </div>
+        <div class="bg-[#FFFFFF] max-w-[1536px] h-[150px] mx-36 px-6 my-4 shadow-lg rounded-lg">
+            <h2 class="font-bold text-justify text-2xl py-5">Question:-3 what are the different way to select on element
+                in DOM ?</h2>
+            <hr>
+            <p>Great Question in the threr are serveral ways to selet an element uising Javascript <br>
+                Commonly used By-ID,by Class,by tag name,QuerySeletor ,querySelectorAll etc. <br>
+            </p>
+
+        </div>
+        <div class="bg-[#FFFFFF] max-w-[1536px] h-[150px] mx-36 px-6 my-4 shadow-lg rounded-lg">
+            <h2 class="font-bold text-justify text-2xl py-5">Question:-What is event delegation in the DOM?</h2>
+            <hr>
+            <p>- When you click on an <li>, the event bubbles up to the <ul>.
+            The event listener on <ul> captures the event and checks event.target (the clicked element).
+                If the clicked element is an <li>, the function executes.
+
+            </p>
+
+        </div>
+
+         <div class="bg-[#FFFFFF] max-w-[1536px] h-[150px] mx-36 px-6 my-4 shadow-lg rounded-lg">
+            <h2 class="font-bold text-justify text-2xl py-5">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            <hr>
+            <p>1. Creating Elements You can use the document.createElement() method to create a new HTML element.<br>
+                Commonly used By-ID,by Class,by tag name,QuerySeletor ,querySelectorAll etc. <br>2. Adding Elements
+        Once you've created an element, you need to add it to the DOM. You can do this using appendChild() or insertBefore().3. Removing Elements
+            To remove an element, you can use removeChild() or the modern remove() method.
+
+
+            </p>
+
+        </div>
+    </section>
+    </div>
+
+
+
+</html>
